@@ -1,6 +1,7 @@
 # 📊 UK Football Performance Visualizer (2005–2024)
 
 This project analyzes and visualizes football performance across ceremonial counties in the UK between 2005 and 2024. It provides an interactive HTML-based interface for exploring data such as win/loss ratios and team distributions, using GeoJSON for geographic mapping.
+
 ![Demo Screenshot](photos/choropleth.png)
 ![Demo Screenshot](photos/trend.png)
 
