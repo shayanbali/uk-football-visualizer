@@ -29,7 +29,7 @@ shayan.bali/
 
 - Interactive web-based visualization using HTML and JavaScript
 - Performance metrics for Premier League teams mapped by UK region
-- Clear display of wins, losses, and team statistics
+- Trend charts for each county by clicking on them
 
 ## 🗺️ Data Sources
 
