@@ -42,7 +42,7 @@ You can view a walkthrough of the tool in the [Shayan_Bali_Demo.MP4](./shayan.ba
 
 ## 📘 Report
 
-For a detailed explanation of the methodology and insights, refer to the [Shayan_Bali_Report.pdf](./shayan.bali/Shayan_Bali_Report.pdf).
+For a detailed explanation of the methodology and insights, refer to the [Shayan_Bali_Report.pdf](./Shayan_Bali_Report.pdf).
 
 ## 🌐 How to Run
 
