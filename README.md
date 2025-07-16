@@ -1,8 +1,8 @@
 # 📊 UK Football Performance Visualizer (2005–2024)
 
 This project analyzes and visualizes football performance across ceremonial counties in the UK between 2005 and 2024. It provides an interactive HTML-based interface for exploring data such as win/loss ratios and team distributions, using GeoJSON for geographic mapping.
-
-![Demo Screenshot](./shayan.bali/Shayan_Bali_Report.pdf)
+![Demo Screenshot](photos/choropleth.png)
+![Demo Screenshot](photos/trend.png)
 
 ## 📁 Project Structure
 
@@ -49,12 +49,14 @@ For a detailed explanation of the methodology and insights, refer to the [Shayan
 1. Clone this repository:
     ```bash
     git clone https://github.com/your-username/uk-football-visualizer.git
-    cd uk-football-visualizer/Code
     ```
 
-2. Open `index.html` in your browser to explore the visualizations:
+2. you can run a local server:
+
+    Using Python 3:
     ```bash
-    open index.html
+    cd uk-football-visualizer/code
+    python3 -m http.server
     ```
 
 ## 📄 License
