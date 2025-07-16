@@ -39,7 +39,7 @@ shayan.bali/
 
 ## 📽️ Demo
 
-You can view a walkthrough of the tool in the [Shayan_Bali_Demo.MP4](./shayan.bali/Shayan_Bali_Demo.MP4) file.
+You can view a walkthrough of the tool in the [Shayan_Bali_Demo_compress.mp4](Shayan_Bali_Demo_compress.mp4) file.
 
 ## 📘 Report
 
