@@ -1,0 +1,201 @@
+season_end_year,team,position,played,won,drawn,lost,gf,ga,gd,points,City,County,performance_rank
+2015,Chelsea,1,38,26,9,3,73,32,41,87,London,Greater London,4.9
+2015,Manchester City,2,38,24,7,7,83,38,45,79,Manchester,Greater Manchester,1.7
+2015,Arsenal,3,38,22,9,7,71,36,35,75,London,Greater London,4.6
+2015,Manchester Utd,4,38,20,10,8,62,37,25,70,Manchester,Greater Manchester,4.5
+2015,Tottenham,5,38,19,7,12,58,53,5,64,London,Greater London,4.7
+2015,Liverpool,6,38,18,8,12,52,48,4,62,Liverpool,Merseyside,3.8
+2015,Southampton,7,38,18,6,14,54,33,21,60,Southampton,Hampshire,12.777777777777779
+2015,Swansea City,8,38,16,8,14,46,49,-3,56,Swansea,Swansea (Wales),13.25
+2015,Stoke City,9,38,15,9,14,48,45,3,54,Stoke-on-Trent,Staffordshire,12.5
+2015,Crystal Palace,10,38,13,9,16,47,51,-4,48,London,Greater London,12.3
+2015,Everton,11,38,12,11,15,48,50,-2,47,Liverpool,Merseyside,11.5
+2015,West Ham,12,38,12,11,15,44,47,-3,47,London,Greater London,10.5
+2015,West Brom,13,38,11,11,16,38,51,-13,44,West Bromwich,West Midlands,16.857142857142858
+2015,Leicester City,14,38,11,8,19,46,55,-9,41,Leicester,Leicestershire,9.0
+2015,Newcastle Utd,15,38,10,9,19,40,63,-23,39,Newcastle upon Tyne,Tyne and Wear,12.4
+2015,Sunderland,16,38,7,17,14,31,53,-22,38,Sunderland,Tyne and Wear,17.666666666666668
+2015,Aston Villa,17,38,10,8,20,31,57,-26,38,Birmingham,West Midlands,15.3
+2015,Hull City,18,38,8,11,19,33,51,-18,35,Hull,East Riding of Yorkshire,19.0
+2015,Burnley,19,38,7,12,19,28,53,-25,33,Burnley,Lancashire,16.3
+2015,QPR,20,38,8,6,24,42,73,-31,30,London,Greater London,20.0
+2016,Leicester City,1,38,23,12,3,68,36,32,81,Leicester,Leicestershire,9.0
+2016,Arsenal,2,38,20,11,7,65,36,29,71,London,Greater London,4.6
+2016,Tottenham,3,38,19,13,6,69,35,34,70,London,Greater London,4.7
+2016,Manchester City,4,38,19,9,10,71,41,30,66,Manchester,Greater Manchester,1.7
+2016,Manchester Utd,5,38,19,9,10,49,35,14,66,Manchester,Greater Manchester,4.5
+2016,Southampton,6,38,18,9,11,59,41,18,63,Southampton,Hampshire,12.777777777777779
+2016,West Ham,7,38,16,14,8,65,51,14,62,London,Greater London,10.5
+2016,Liverpool,8,38,16,12,10,63,50,13,60,Liverpool,Merseyside,3.8
+2016,Stoke City,9,38,14,9,15,41,55,-14,51,Stoke-on-Trent,Staffordshire,12.5
+2016,Chelsea,10,38,12,14,12,59,53,6,50,London,Greater London,4.9
+2016,Everton,11,38,11,14,13,59,55,4,47,Liverpool,Merseyside,11.5
+2016,Swansea City,12,38,12,11,15,42,52,-10,47,Swansea,Swansea (Wales),13.25
+2016,Watford,13,38,12,9,17,40,50,-10,45,Watford,Hertfordshire,16.285714285714285
+2016,West Brom,14,38,10,13,15,34,48,-14,43,West Bromwich,West Midlands,16.857142857142858
+2016,Crystal Palace,15,38,11,9,18,39,51,-12,42,London,Greater London,12.3
+2016,Bournemouth,16,38,11,9,18,45,67,-22,42,Bournemouth,Dorset,15.333333333333334
+2016,Sunderland,17,38,9,12,17,48,62,-14,39,Sunderland,Tyne and Wear,17.666666666666668
+2016,Newcastle Utd,18,38,9,10,19,44,65,-21,37,Newcastle upon Tyne,Tyne and Wear,12.4
+2016,Norwich City,19,38,9,7,22,39,67,-28,34,Norwich,Norfolk,20.428571428571427
+2016,Aston Villa,20,38,3,8,27,27,76,-49,17,Birmingham,West Midlands,15.3
+2017,Chelsea,1,38,30,3,5,85,33,52,93,London,Greater London,4.9
+2017,Tottenham,2,38,26,8,4,86,26,60,86,London,Greater London,4.7
+2017,Manchester City,3,38,23,9,6,80,39,41,78,Manchester,Greater Manchester,1.7
+2017,Liverpool,4,38,22,10,6,78,42,36,76,Liverpool,Merseyside,3.8
+2017,Arsenal,5,38,23,6,9,77,44,33,75,London,Greater London,4.6
+2017,Manchester Utd,6,38,18,15,5,54,29,25,69,Manchester,Greater Manchester,4.5
+2017,Everton,7,38,17,10,11,62,44,18,61,Liverpool,Merseyside,11.5
+2017,Southampton,8,38,12,10,16,41,48,-7,46,Southampton,Hampshire,12.777777777777779
+2017,Bournemouth,9,38,12,10,16,55,67,-12,46,Bournemouth,Dorset,15.333333333333334
+2017,West Brom,10,38,12,9,17,43,51,-8,45,West Bromwich,West Midlands,16.857142857142858
+2017,West Ham,11,38,12,9,17,47,64,-17,45,London,Greater London,10.5
+2017,Leicester City,12,38,12,8,18,48,63,-15,44,Leicester,Leicestershire,9.0
+2017,Stoke City,13,38,11,11,16,41,56,-15,44,Stoke-on-Trent,Staffordshire,12.5
+2017,Crystal Palace,14,38,12,5,21,50,63,-13,41,London,Greater London,12.3
+2017,Swansea City,15,38,12,5,21,45,70,-25,41,Swansea,Swansea (Wales),13.25
+2017,Burnley,16,38,11,7,20,39,55,-16,40,Burnley,Lancashire,16.3
+2017,Watford,17,38,11,7,20,40,68,-28,40,Watford,Hertfordshire,16.285714285714285
+2017,Hull City,18,38,9,7,22,37,80,-43,34,Hull,East Riding of Yorkshire,19.0
+2017,Middlesbrough,19,38,5,13,20,27,53,-26,28,Middlesbrough,North Yorkshire,19.0
+2017,Sunderland,20,38,6,6,26,29,69,-40,24,Sunderland,Tyne and Wear,17.666666666666668
+2018,Manchester City,1,38,32,4,2,106,27,79,100,Manchester,Greater Manchester,1.7
+2018,Manchester Utd,2,38,25,6,7,68,28,40,81,Manchester,Greater Manchester,4.5
+2018,Tottenham,3,38,23,8,7,74,36,38,77,London,Greater London,4.7
+2018,Liverpool,4,38,21,12,5,84,38,46,75,Liverpool,Merseyside,3.8
+2018,Chelsea,5,38,21,7,10,62,38,24,70,London,Greater London,4.9
+2018,Arsenal,6,38,19,6,13,74,51,23,63,London,Greater London,4.6
+2018,Burnley,7,38,14,12,12,36,39,-3,54,Burnley,Lancashire,16.3
+2018,Everton,8,38,13,10,15,44,58,-14,49,Liverpool,Merseyside,11.5
+2018,Leicester City,9,38,12,11,15,56,60,-4,47,Leicester,Leicestershire,9.0
+2018,Newcastle Utd,10,38,12,8,18,39,47,-8,44,Newcastle upon Tyne,Tyne and Wear,12.4
+2018,Crystal Palace,11,38,11,11,16,45,55,-10,44,London,Greater London,12.3
+2018,Bournemouth,12,38,11,11,16,45,61,-16,44,Bournemouth,Dorset,15.333333333333334
+2018,West Ham,13,38,10,12,16,48,68,-20,42,London,Greater London,10.5
+2018,Watford,14,38,11,8,19,44,64,-20,41,Watford,Hertfordshire,16.285714285714285
+2018,Brighton,15,38,9,13,16,34,54,-20,40,Brighton and Hove,East Sussex,12.714285714285714
+2018,Huddersfield,16,38,9,10,19,28,58,-30,37,Huddersfield,West Yorkshire,18.0
+2018,Southampton,17,38,7,15,16,37,56,-19,36,Southampton,Hampshire,12.777777777777779
+2018,Swansea City,18,38,8,9,21,28,56,-28,33,Swansea,Swansea (Wales),13.25
+2018,Stoke City,19,38,7,12,19,35,68,-33,33,Stoke-on-Trent,Staffordshire,12.5
+2018,West Brom,20,38,6,13,19,31,56,-25,31,West Bromwich,West Midlands,16.857142857142858
+2019,Manchester City,1,38,32,2,4,95,23,72,98,Manchester,Greater Manchester,1.7
+2019,Liverpool,2,38,30,7,1,89,22,67,97,Liverpool,Merseyside,3.8
+2019,Chelsea,3,38,21,9,8,63,39,24,72,London,Greater London,4.9
+2019,Tottenham,4,38,23,2,13,67,39,28,71,London,Greater London,4.7
+2019,Arsenal,5,38,21,7,10,73,51,22,70,London,Greater London,4.6
+2019,Manchester Utd,6,38,19,9,10,65,54,11,66,Manchester,Greater Manchester,4.5
+2019,Wolves,7,38,16,9,13,47,46,1,57,Wolverhampton,West Midlands,10.666666666666666
+2019,Everton,8,38,15,9,14,54,46,8,54,Liverpool,Merseyside,11.5
+2019,Leicester City,9,38,15,7,16,51,48,3,52,Leicester,Leicestershire,9.0
+2019,West Ham,10,38,15,7,16,52,55,-3,52,London,Greater London,10.5
+2019,Watford,11,38,14,8,16,52,59,-7,50,Watford,Hertfordshire,16.285714285714285
+2019,Crystal Palace,12,38,14,7,17,51,53,-2,49,London,Greater London,12.3
+2019,Newcastle Utd,13,38,12,9,17,42,48,-6,45,Newcastle upon Tyne,Tyne and Wear,12.4
+2019,Bournemouth,14,38,13,6,19,56,70,-14,45,Bournemouth,Dorset,15.333333333333334
+2019,Burnley,15,38,11,7,20,45,68,-23,40,Burnley,Lancashire,16.3
+2019,Southampton,16,38,9,12,17,45,65,-20,39,Southampton,Hampshire,12.777777777777779
+2019,Brighton,17,38,9,9,20,35,60,-25,36,Brighton and Hove,East Sussex,12.714285714285714
+2019,Cardiff City,18,38,10,4,24,34,69,-35,34,Cardiff,Cardiff (Wales),18.0
+2019,Fulham,19,38,7,5,26,34,81,-47,26,London,Greater London,17.0
+2019,Huddersfield,20,38,3,7,28,22,76,-54,16,Huddersfield,West Yorkshire,18.0
+2020,Liverpool,1,38,32,3,3,85,33,52,99,Liverpool,Merseyside,3.8
+2020,Manchester City,2,38,26,3,9,102,35,67,81,Manchester,Greater Manchester,1.7
+2020,Manchester Utd,3,38,18,12,8,66,36,30,66,Manchester,Greater Manchester,4.5
+2020,Chelsea,4,38,20,6,12,69,54,15,66,London,Greater London,4.9
+2020,Leicester City,5,38,18,8,12,67,41,26,62,Leicester,Leicestershire,9.0
+2020,Tottenham,6,38,16,11,11,61,47,14,59,London,Greater London,4.7
+2020,Wolves,7,38,15,14,9,51,40,11,59,Wolverhampton,West Midlands,10.666666666666666
+2020,Arsenal,8,38,14,14,10,56,48,8,56,London,Greater London,4.6
+2020,Sheffield Utd,9,38,14,12,12,39,39,0,54,Sheffield,South Yorkshire,18.2
+2020,Burnley,10,38,15,9,14,43,50,-7,54,Burnley,Lancashire,16.3
+2020,Southampton,11,38,15,7,16,51,60,-9,52,Southampton,Hampshire,12.777777777777779
+2020,Everton,12,38,13,10,15,44,56,-12,49,Liverpool,Merseyside,11.5
+2020,Newcastle Utd,13,38,11,11,16,38,58,-20,44,Newcastle upon Tyne,Tyne and Wear,12.4
+2020,Crystal Palace,14,38,11,10,17,31,50,-19,43,London,Greater London,12.3
+2020,Brighton,15,38,9,14,15,39,54,-15,41,Brighton and Hove,East Sussex,12.714285714285714
+2020,West Ham,16,38,10,9,19,49,62,-13,39,London,Greater London,10.5
+2020,Aston Villa,17,38,9,8,21,41,67,-26,35,Birmingham,West Midlands,15.3
+2020,Bournemouth,18,38,9,7,22,40,65,-25,34,Bournemouth,Dorset,15.333333333333334
+2020,Watford,19,38,8,10,20,36,64,-28,34,Watford,Hertfordshire,16.285714285714285
+2020,Norwich City,20,38,5,6,27,26,75,-49,21,Norwich,Norfolk,20.428571428571427
+2021,Manchester City,1,38,27,5,6,83,32,51,86,Manchester,Greater Manchester,1.7
+2021,Manchester Utd,2,38,21,11,6,73,44,29,74,Manchester,Greater Manchester,4.5
+2021,Liverpool,3,38,20,9,9,68,42,26,69,Liverpool,Merseyside,3.8
+2021,Chelsea,4,38,19,10,9,58,36,22,67,London,Greater London,4.9
+2021,Leicester City,5,38,20,6,12,68,50,18,66,Leicester,Leicestershire,9.0
+2021,West Ham,6,38,19,8,11,62,47,15,65,London,Greater London,10.5
+2021,Tottenham,7,38,18,8,12,68,45,23,62,London,Greater London,4.7
+2021,Arsenal,8,38,18,7,13,55,39,16,61,London,Greater London,4.6
+2021,Leeds United,9,38,18,5,15,62,54,8,59,Leeds,West Yorkshire,15.0
+2021,Everton,10,38,17,8,13,47,48,-1,59,Liverpool,Merseyside,11.5
+2021,Aston Villa,11,38,16,7,15,55,46,9,55,Birmingham,West Midlands,15.3
+2021,Newcastle Utd,12,38,12,9,17,46,62,-16,45,Newcastle upon Tyne,Tyne and Wear,12.4
+2021,Wolves,13,38,12,9,17,36,52,-16,45,Wolverhampton,West Midlands,10.666666666666666
+2021,Crystal Palace,14,38,12,8,18,41,66,-25,44,London,Greater London,12.3
+2021,Southampton,15,38,12,7,19,47,68,-21,43,Southampton,Hampshire,12.777777777777779
+2021,Brighton,16,38,9,14,15,40,46,-6,41,Brighton and Hove,East Sussex,12.714285714285714
+2021,Burnley,17,38,10,9,19,33,55,-22,39,Burnley,Lancashire,16.3
+2021,Fulham,18,38,5,13,20,27,53,-26,28,London,Greater London,17.0
+2021,West Brom,19,38,5,11,22,35,76,-41,26,West Bromwich,West Midlands,16.857142857142858
+2021,Sheffield Utd,20,38,7,2,29,20,63,-43,23,Sheffield,South Yorkshire,18.2
+2022,Manchester City,1,38,29,6,3,99,26,73,93,Manchester,Greater Manchester,1.7
+2022,Liverpool,2,38,28,8,2,94,26,68,92,Liverpool,Merseyside,3.8
+2022,Chelsea,3,38,21,11,6,76,33,43,74,London,Greater London,4.9
+2022,Tottenham,4,38,22,5,11,69,40,29,71,London,Greater London,4.7
+2022,Arsenal,5,38,22,3,13,61,48,13,69,London,Greater London,4.6
+2022,Manchester Utd,6,38,16,10,12,57,57,0,58,Manchester,Greater Manchester,4.5
+2022,West Ham,7,38,16,8,14,60,51,9,56,London,Greater London,10.5
+2022,Leicester City,8,38,14,10,14,62,59,3,52,Leicester,Leicestershire,9.0
+2022,Brighton,9,38,12,15,11,42,44,-2,51,Brighton and Hove,East Sussex,12.714285714285714
+2022,Wolves,10,38,15,6,17,38,43,-5,51,Wolverhampton,West Midlands,10.666666666666666
+2022,Newcastle Utd,11,38,13,10,15,44,62,-18,49,Newcastle upon Tyne,Tyne and Wear,12.4
+2022,Crystal Palace,12,38,11,15,12,50,46,4,48,London,Greater London,12.3
+2022,Brentford,13,38,13,7,18,48,56,-8,46,London,Greater London,12.666666666666666
+2022,Aston Villa,14,38,13,6,19,52,54,-2,45,Birmingham,West Midlands,15.3
+2022,Southampton,15,38,9,13,16,43,67,-24,40,Southampton,Hampshire,12.777777777777779
+2022,Everton,16,38,11,6,21,43,66,-23,39,Liverpool,Merseyside,11.5
+2022,Leeds United,17,38,9,11,18,42,79,-37,38,Leeds,West Yorkshire,15.0
+2022,Burnley,18,38,7,14,17,34,53,-19,35,Burnley,Lancashire,16.3
+2022,Watford,19,38,6,5,27,34,77,-43,23,Watford,Hertfordshire,16.285714285714285
+2022,Norwich City,20,38,5,7,26,23,84,-61,22,Norwich,Norfolk,20.428571428571427
+2023,Manchester City,1,38,28,5,5,94,33,61,89,Manchester,Greater Manchester,1.7
+2023,Arsenal,2,38,26,6,6,88,43,45,84,London,Greater London,4.6
+2023,Manchester Utd,3,38,23,6,9,58,43,15,75,Manchester,Greater Manchester,4.5
+2023,Newcastle Utd,4,38,19,14,5,68,33,35,71,Newcastle upon Tyne,Tyne and Wear,12.4
+2023,Liverpool,5,38,19,10,9,75,47,28,67,Liverpool,Merseyside,3.8
+2023,Brighton,6,38,18,8,12,72,53,19,62,Brighton and Hove,East Sussex,12.714285714285714
+2023,Aston Villa,7,38,18,7,13,51,46,5,61,Birmingham,West Midlands,15.3
+2023,Tottenham,8,38,18,6,14,70,63,7,60,London,Greater London,4.7
+2023,Brentford,9,38,15,14,9,58,46,12,59,London,Greater London,12.666666666666666
+2023,Fulham,10,38,15,7,16,55,53,2,52,London,Greater London,17.0
+2023,Crystal Palace,11,38,11,12,15,40,49,-9,45,London,Greater London,12.3
+2023,Chelsea,12,38,11,11,16,38,47,-9,44,London,Greater London,4.9
+2023,Wolves,13,38,11,8,19,31,58,-27,41,Wolverhampton,West Midlands,10.666666666666666
+2023,West Ham,14,38,11,7,20,42,55,-13,40,London,Greater London,10.5
+2023,Bournemouth,15,38,11,6,21,37,71,-34,39,Bournemouth,Dorset,15.333333333333334
+2023,Nottingham Forest,16,38,9,11,18,38,68,-30,38,West Bridgford,Nottinghamshire,16.5
+2023,Everton,17,38,8,12,18,34,57,-23,36,Liverpool,Merseyside,11.5
+2023,Leicester City,18,38,9,7,22,51,68,-17,34,Leicester,Leicestershire,9.0
+2023,Leeds United,19,38,7,10,21,48,78,-30,31,Leeds,West Yorkshire,15.0
+2023,Southampton,20,38,6,7,25,36,73,-37,25,Southampton,Hampshire,12.777777777777779
+2024,Manchester City,1,38,28,7,3,96,34,62,91,Manchester,Greater Manchester,1.7
+2024,Arsenal,2,38,28,5,5,91,29,62,89,London,Greater London,4.6
+2024,Liverpool,3,38,24,10,4,86,41,45,82,Liverpool,Merseyside,3.8
+2024,Aston Villa,4,38,20,8,10,76,61,15,68,Birmingham,West Midlands,15.3
+2024,Tottenham,5,38,20,6,12,74,61,13,66,London,Greater London,4.7
+2024,Chelsea,6,38,18,9,11,77,63,14,63,London,Greater London,4.9
+2024,Newcastle Utd,7,38,18,6,14,85,62,23,60,Newcastle upon Tyne,Tyne and Wear,12.4
+2024,Manchester Utd,8,38,18,6,14,57,58,-1,60,Manchester,Greater Manchester,4.5
+2024,West Ham,9,38,14,10,14,60,74,-14,52,London,Greater London,10.5
+2024,Crystal Palace,10,38,13,10,15,57,58,-1,49,London,Greater London,12.3
+2024,Brighton,11,38,12,12,14,55,62,-7,48,Brighton and Hove,East Sussex,12.714285714285714
+2024,Bournemouth,12,38,13,9,16,54,67,-13,48,Bournemouth,Dorset,15.333333333333334
+2024,Fulham,13,38,13,8,17,55,61,-6,47,London,Greater London,17.0
+2024,Wolves,14,38,13,7,18,50,65,-15,46,Wolverhampton,West Midlands,10.666666666666666
+2024,Everton,15,38,13,9,16,40,51,-11,40,Liverpool,Merseyside,11.5
+2024,Brentford,16,38,10,9,19,56,65,-9,39,London,Greater London,12.666666666666666
+2024,Nottingham Forest,17,38,9,9,20,49,67,-18,32,Nottingham,Nottinghamshire,16.5
+2024,Luton Town,18,38,6,8,24,52,85,-33,26,Luton,Bedfordshire,18.0
+2024,Burnley,19,38,5,9,24,41,78,-37,24,Burnley,Lancashire,16.3
+2024,Sheffield Utd,20,38,3,7,28,35,104,-69,16,Sheffield,South Yorkshire,18.2
