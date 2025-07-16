@@ -76,8 +76,8 @@ body { background: linear-gradient(to bottom, #f9f9f9, #e6e6e6); }</style>
 
     Promise.all([
       d3.json("ceremonial_counties.geojson"),
-      d3.csv("performance_by_county.csv"),
-      d3.csv("pl_record.csv")
+      d3.csv("data/performance_by_county.csv"),
+      d3.csv("data/pl_record.csv")
     ]).then(([geojson, summaryData, fullData]) => {
       const width = 1000;
       const height = 1200;
