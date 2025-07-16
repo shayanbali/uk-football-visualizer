@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Premier League Performance Map</title>
+<style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+
+      background-size: cover;
+    }
+    .tooltip {
+      z-index: 9999;
+      position: absolute;
+      background: white;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      pointer-events: none;
+      font-size: 14px;
+    }
+    
+    #linechart {
+      height: 400px;
+      margin: 20px auto;
+      max-width: 960px;
+    }
+    .line {
+      fill: none;
+      stroke-width: 2;
+    }
+    .axis-label {
+      font-size: 12px;
+    }
+  
+svg#map { width: 100vw; height: auto; display: block; }
+
+body { background: linear-gradient(to bottom, #f9f9f9, #e6e6e6); }</style>
+</head>
+<body><h2 style="text-align:center; margin-top: 30px;">Data Processing and Source Acknowledgement</h2><div id="data-description" style="max-width: 900px; margin: 40px auto; font-size: 16px; line-height: 1.6; color: #333;">
+<p>
+  My interactive visualization shows the average Premier League team performance in UK counties from 2005 to 2024.
+  The data was preprocessed by calculating the average final league <strong>position</strong> (lower is better) for each team per season,
+  then aggregating team performances by <strong>county</strong>. Counties are shown with different colors, which are associated with average performance rank,
+  with darker colors indicating better performance.
+</p>
+<p>
+  I have used a dataset about Premier League records, <a href="https://www.kaggle.com/datasets/evangower/english-premier-league-standings" target="_blank">Kaggle Premier League Tables</a>, and enhanced it by manually linking each team to its home
+  <strong>city</strong> and corresponding <strong>ceremonial county</strong>, based on <a href="https://www.kaggle.com/datasets/shayanbali/epl-teams-from-2005-2025-with-their-county-and-city" target="_blank">my own created dataset</a>, which is publicly available. County boundaries were sourced from publicly available UK GeoJSON files.
+</p>
+<p>
+  Hovering shows each county's average rank; clicking a county opens a chart showing the year-by-year positions of teams from that region.
+</p>
+</div>
+<h2 style="text-align:center; color:rgb(44, 41, 41);">Premier League Team Ranks by County (Click to Explore)</h2>
+<div class="tooltip" id="tooltip" style="opacity: 0;"></div>
+<div id="map-wrapper" style="margin-bottom: 40px;">
+<svg id="map" preserveaspectratio="xMidYMid meet"></svg>
+</div><div id="caption-container" style="margin-top: 60px; text-align: center;"><p style="color: #444; font-size: 16px;">Click a county to view team performance trends.</p></div>
+<div id="legend" style="max-width: 960px; margin: -480pt auto;"></div>
+<div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+    background-color:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
+<div style="background:white; padding:20px; border-radius:8px; max-width:960px; width:95%; max-height:90%; overflow:auto; position:relative;">
+<button onclick="document.getElementById('modal').style.display='none'" style="position:absolute; top:10px; right:10px; background:#c00; color:white; border:none; padding:5px 10px; cursor:pointer;">✖</button>
+<div id="linechart">
+<p style="text-align:center;color:#888; margin: 480pt auto;">Click a county to view team performance trends.</p>
+</div>
+</div>
+</div>
+<p style="text-align:center;color:#120b0b; margin: 440pt auto;">Click a county to view team performance trends.</p>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    const svg = d3.select("#map");
+    const tooltip = d3.select("#tooltip");
+
+    Promise.all([
+      d3.json("ceremonial_counties.geojson"),
+      d3.csv("performance_by_county.csv"),
+      d3.csv("pl_record.csv")
+    ]).then(([geojson, summaryData, fullData]) => {
+      const width = 1000;
+      const height = 1200;
+
+      fullData.forEach(d => {
+        d.performance_rank = +d.performance_rank;
+        d.season_end_year = +d.season_end_year;
+        d.County = d.County.trim().toLowerCase();
+      });
+
+      const rankMap = Object.fromEntries(summaryData.map(d => [d.county, +d.performance_rank]));
+      const ranks = summaryData.map(d => +d.performance_rank);
+
+      const colorScale = d3.scaleSequential()
+        .domain([d3.max(ranks), d3.min(ranks)])
+        .interpolator(d3.interpolateBuPu);
+
+      const projection = d3.geoConicConformal()
+        .parallels([49.5, 58.5])
+        .rotate([4.4, 0])
+        .center([0, 54])
+        .scale(4000)
+        .translate([width / 2, height / 2]);
+
+      const path = d3.geoPath().projection(projection);
+      svg.attr("viewBox", [0, 0, width, height]);
+
+      svg.selectAll("path")
+        .data(geojson.features)
+        .join("path")
+        .attr("d", path)
+        .attr("fill", d => {
+          const val = rankMap[d.properties.county];
+          return val ? colorScale(val) : "#ccc";
+        })
+        .attr("stroke", "#444")
+        .on("mouseover", (event, d) => {
+          const county = d.properties.county;
+          const value = rankMap[county];
+          tooltip.transition().style("opacity", 1);
+          tooltip.html(`<strong>${county}</strong><br>Avg. Rank: ${value !== undefined ? value.toFixed(2) : "No data"}`)
+            .style("left", (event.pageX + 10) + "px")
+            .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", () => tooltip.transition().style("opacity", 0))
+        .on("click", (event, d) => {
+          const county = d.properties.county.trim().toLowerCase();
+          document.getElementById("modal").style.display = "flex";
+          drawLineChart(county, fullData);
+        });
+
+      // legend details
+      const legendWidth = 300;
+      const legendHeight = 10;
+
+      const legendSvg = d3.select("#legend")
+        .append("svg")
+        .attr("width", legendWidth)
+        .attr("height", 50);
+
+      const defs = legendSvg.append("defs");
+
+      const linearGradient = defs.append("linearGradient")
+        .attr("id", "legend-gradient");
+
+      linearGradient.selectAll("stop")
+        .data([
+          {offset: "0%", color: colorScale(d3.max(ranks))},
+          {offset: "100%", color: colorScale(d3.min(ranks))}
+        ])
+        .enter().append("stop")
+        .attr("offset", d => d.offset)
+        .attr("stop-color", d => d.color);
+
+      legendSvg.append("rect")
+        .attr("x", 20)
+        .attr("y", 10)
+        .attr("width", legendWidth - 40)
+        .attr("height", legendHeight)
+        .style("fill", "url(#legend-gradient)")
+        .style("stroke", "#ccc")
+        .style("stroke-width", "1");
+
+      const legendScale = d3.scaleLinear()
+        .domain([d3.max(ranks), d3.min(ranks)])
+        .range([20, legendWidth - 20]);
+
+      const legendAxis = d3.axisBottom(legendScale)
+        .ticks(5)
+        .tickFormat(d3.format(".0f"));
+
+      legendSvg.append("g")
+        .attr("transform", `translate(0, ${10 + legendHeight})`)
+        .call(legendAxis);
+
+      legendSvg.append("text")
+        .attr("x", legendWidth / 2)
+        .attr("y", 45)
+        .attr("text-anchor", "middle")
+        .style("font-size", "12px")
+        .style("fill", "#444")
+        .text("Average Performance Rank (Higher is Worse)");
+
+      function drawLineChart(county, data) {
+        const margin = {top: 30, right: 30, bottom: 50, left: 60};
+        const width = 960 - margin.left - margin.right;
+        const height = 400 - margin.top - margin.bottom;
+
+        const container = d3.select("#linechart");
+        container.selectAll("*").remove();
+
+        const svg = container.append("svg")
+          .attr("viewBox", [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom])
+          .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const filtered = data.filter(d => d.County === county);
+
+        if (filtered.length === 0) {
+          container.append("p").text("No data available for this county.")
+            .style("text-align", "center")
+            .style("color", "#888");
+          return;
+        }
+
+        const teams = Array.from(new Set(filtered.map(d => d.team)));
+        const nested = d3.group(filtered, d => d.team);
+
+        const x = d3.scaleLinear()
+          .domain(d3.extent(filtered, d => d.season_end_year))
+          .range([0, width]);
+
+        const y = d3.scaleLinear()
+          .domain([d3.max(filtered, d => +d.position), d3.min(filtered, d => +d.position)])
+          .range([height, 0]);
+
+        const color = d3.scaleOrdinal()
+          .domain(teams)
+          .range(d3.schemeTableau10);
+
+        svg.append("g").call(d3.axisLeft(y));
+        svg.append("g")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+        svg.append("text")
+          .attr("x", width / 2)
+          .attr("y", height + 40)
+          .attr("text-anchor", "middle")
+          .attr("class", "axis-label")
+          .text("Season End Year");
+
+        svg.append("text")
+          .attr("x", -height / 2)
+          .attr("y", -40)
+          .attr("transform", "rotate(-90)")
+          .attr("text-anchor", "middle")
+          .attr("class", "axis-label")
+          .text("Position");
+
+        for (const [team, values] of nested) {
+          // line for each team
+          svg.append("path")
+            .datum(values.sort((a, b) => a.season_end_year - b.season_end_year))
+            .attr("fill", "none")
+            .attr("stroke", color(team))
+            .attr("stroke-width", 2)
+            .attr("class", "line")
+            .attr("d", d3.line()
+              .x(d => x(d.season_end_year))
+              .y(d => y(d.position))
+            );
+
+          // points of plot
+          svg.selectAll(".dot-" + team.replace(/\s+/g, "-"))
+            .data(values.sort((a, b) => a.season_end_year - b.season_end_year))
+            .enter()
+            .append("circle")
+            .attr("cx", d => x(d.season_end_year))
+            .attr("cy", d => y(d.position))
+            .attr("r", 4)
+            .attr("fill", color(team))
+            .on("mouseover", function(event, d) {
+              tooltip.transition().style("opacity", 1);
+              tooltip.html(`<strong>${d.team}</strong><br>Year: ${d.season_end_year}<br>Position: ${d.position}`)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px");
+            })
+            .on("mouseout", () => tooltip.transition().style("opacity", 0));
+          const sortedValues = values.sort((a, b) => a.season_end_year - b.season_end_year);
+
+          svg.append("path")
+            .datum(values.sort((a, b) => a.season_end_year - b.season_end_year))
+            .attr("fill", "none")
+            .attr("stroke", color(team))
+            .attr("stroke-width", 2)
+            .attr("class", "line")
+            .attr("d", d3.line()
+              .x(d => x(d.season_end_year))
+              .y(d => y(+d.position))
+            );
+
+          svg.selectAll(`.dot-${team.replace(/\s+/g, '-')}`)
+            .data(values.sort((a, b) => a.season_end_year - b.season_end_year))
+            .enter()
+            .append("circle")
+            .attr("cx", d => x(d.season_end_year))
+            .attr("cy", d => y(+d.position))
+            .attr("r", 4)
+            .attr("fill", color(team))
+            .on("mouseover", function (event, d) {
+              tooltip.transition().style("opacity", 1);
+              tooltip.html(
+                `<strong>${d.team}</strong><br>Year: ${d.season_end_year}<br>Position: ${d.position}`
+              )
+              .style("left", (event.pageX + 10) + "px")
+              .style("top", (event.pageY - 20) + "px");
+            })
+            .on("mouseout", () => tooltip.transition().style("opacity", 0));
+
+          svg.append("text")
+            .attr("x", width - 80)
+            .attr("y", y(sortedValues[sortedValues.length - 1].position))
+            .attr("fill", color(team))
+            .style("font-size", "12px")
+            .text(team);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
