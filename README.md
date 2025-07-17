@@ -59,6 +59,10 @@ For a detailed explanation of the methodology and insights, refer to the [Shayan
     cd uk-football-visualizer/code
     python3 -m http.server
     ```
+    Then open:
+    ```
+    http://localhost:8000/index.html
+    ```
 
 ## 📄 License
 
